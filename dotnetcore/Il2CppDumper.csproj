@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.Cecil" Version="0.9.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../Il2CppDumper/BoyerMooreHorspool.cs" />
+    <Compile Include="../Il2CppDumper/Lz4DecoderStream.cs" />
+    <Compile Include="../Il2CppDumper/NSO.cs" />
+    <Compile Include="../Il2CppDumper/NSOClass.cs" />
+    <Compile Include="../Il2CppDumper/VersionAttribute.cs" />
+    <Compile Include="../Il2CppDumper/Config.cs" />
+    <Compile Include="../Il2CppDumper/DummyAssemblyCreator.cs" />
+    <Compile Include="../Il2CppDumper/Elf.cs" />
+    <Compile Include="../Il2CppDumper/Elf64.cs" />
+    <Compile Include="../Il2CppDumper/Elf64Class.cs" />
+    <Compile Include="../Il2CppDumper/Il2CppClass.cs" />
+    <Compile Include="../Il2CppDumper/Il2Cpp.cs" />
+    <Compile Include="../Il2CppDumper/Macho.cs" />
+    <Compile Include="../Il2CppDumper/Metadata.cs" />
+    <Compile Include="../Il2CppDumper/MetadataClass.cs" />
+    <Compile Include="../Il2CppDumper/MyAssemblyResolver.cs" />
+    <Compile Include="../Il2CppDumper/PE.cs" />
+    <Compile Include="../Il2CppDumper/PEClass.cs" />
+    <Compile Include="../Il2CppDumper/PlusSearch.cs" />
+    <Compile Include="../Il2CppDumper/ArmHelper.cs" />
+    <Compile Include="../Il2CppDumper/DefineConstants.cs" />
+    <Compile Include="../Il2CppDumper/ElfClass.cs" />
+    <Compile Include="../Il2CppDumper/MachoClass.cs" />
+    <Compile Include="../Il2CppDumper/MachoFat.cs" />
+    <Compile Include="../Il2CppDumper/MyBinaryReader.cs" />
+    <Compile Include="../Il2CppDumper/Macho64.cs" />
+    <Compile Include="../Il2CppDumper/Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../Il2CppDumper/Resources/Il2CppDummyDll.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../Il2CppDumper/Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
